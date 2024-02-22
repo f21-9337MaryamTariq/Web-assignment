@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In / Sign Out</title>
+  <style>
+    /* Styles remain the same */
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h4>Welcome TO OUR SITE</h4>
+  <!-- 1. Identify required fields. -->
+  <form id="signInForm" onsubmit="return signIn()">
+    Username: <input type="text" id="username" required><br>
+    Password: <input type="password" id="password" required><br>
+    Birthdate: <input type="date" id="birthdate" required><br> <!-- Date input field -->
+    <input type="submit" value="Sign In">
+  </form>
+
+  <h4 id="signInMessage" style="display: none;">THANKS FOR SIGNING IN </h4>
+  <form id="signOutForm" onsubmit="return signOut()">
+    <input type="submit" value="Sign Out">
+  </form>
+</div>
+
+<script>
+function signIn() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var birthdate = document.getElementById("birthdate").value;
+  
+  if (username.trim() === "") {
+    alert("Please enter your username.");
+    return false;
+  }
+
+  if (password.trim() === "") {
+    alert("Please enter your password.");
+    return false;
+  }
+
+  if (birthdate.trim() === "") {
+    alert("Please enter your birthdate.");
+    return false;
+  }
+
+  // Validate input data length
+  if (username.length < 5) {
+    alert("Username must be at least 5 characters long.");
+    return false;
+  }
+
+  if (password.length < 8) {
+    alert("Password must be at least 8 characters long.");
+    return false;
+  }
+
+  // Validate date input
+  var today = new Date();
+  var inputDate = new Date(birthdate);
+  if (inputDate >= today) {
+    alert("Please enter a valid birthdate.");
+    return false;
+  }
+
+  // Use pattern matching with regular expressions
+  if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    alert("Username can only contain letters and numbers.");
+    return false;
+  }
+
+  if (!/^[a-zA-Z0-9]+$/.test(password)) {
+    alert("Password can only contain letters and numbers.");
+    return false;
+  }
+
+  // Provide clear error messages (already done)
+
+  // Thoroughly test validation process
+  console.log("Username:", username);
+  console.log("Password:", password);
+  console.log("Birthdate:", birthdate);
+  console.log("Validation passed.");
+
+  document.getElementById("signInMessage").style.display = "block"; // Show the message
+  return false; // Prevent form submission
+}
+</script>
+
+</body>
+</html>
