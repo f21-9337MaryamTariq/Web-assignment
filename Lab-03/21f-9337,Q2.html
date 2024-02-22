@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Task 2</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .message {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <button class="btn btn-light" id="basic">Basic</button>
+    <button class="btn btn-light border border-dark rounded-1" id="default">Default</button>
+    <button class="btn btn-primary" id="primary">Primary</button>
+    <button class="btn btn-success" id="success">Success</button>
+    <button class="btn btn-info" id="info">Info</button>
+    <button class="btn btn-warning" id="warning">Warning</button>
+    <button class="btn btn-danger" id="danger">Danger</button>
+    <button class="btn btn-link" id="link">Link</button>
+    <div class="message" id="message"></div>
+  </div>
+  <script>
+    document.getElementById("basic").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Basic button clicked";
+    });
+    document.getElementById("default").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Default button clicked";
+    });
+    document.getElementById("primary").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Primary button clicked";
+    });
+    document.getElementById("success").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Success button clicked";
+    });
+    document.getElementById("info").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Info button clicked";
+    });
+    document.getElementById("warning").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Warning button clicked";
+    });
+    document.getElementById("danger").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Danger button clicked";
+    });
+    document.getElementById("link").addEventListener("click", function() {
+      document.getElementById("message").innerHTML = "Link button clicked";
+    });
+  </script>
+</body>
+</html>
