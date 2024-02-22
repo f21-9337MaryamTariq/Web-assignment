@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+  .calculator {
+    width: 310px;
+    margin: 100px auto;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+	color: white;
+  }
+  
+  .input-field {
+    grid-column: span 3;
+    width: calc(90% );
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 1px;
+	color: white;
+  }
+  
+  .clear-button {
+    width: calc(35% + 50px);
+    padding: 8 px;
+    border: 1px solid #e0e0e0;
+    border-radius: 1px;
+    font-size: 16px bold;
+	color: white;
+	background-color: green;
+  }
+  .button {
+    width: calc(35% + 50px);
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 1px;
+    font-size: 16px bold;
+	color: white;
+	background-color: green;
+  }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" class="input-field" id="output" >
+  <button class="clear-button">C</button>
+  <button class="button">1</button>
+  <button class="button">2</button>
+  <button class="button">3</button>
+  <button class="button">/</button>
+  <button class="button">4</button>
+  <button class="button">5</button>
+  <button class="button">6</button>
+  <button class="button">*</button>
+  <button class="button">7</button>
+  <button class="button">8</button>
+  <button class="button">9</button>
+  <button class="button">+</button>
+  <button class="button">0</button>
+  <button class="button">.</button>
+  <button class="button">=</button>
+  <button class="button">-</button>
+</div>
+
+</body>
+</html>
